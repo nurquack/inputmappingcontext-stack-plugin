@@ -1,0 +1,7 @@
+# Zeilenenden vereinheitlichen
+* text=auto eol=lf
+
+# Nur den addons-Ordner ins ZIP der AssetLib aufnehmen
+/**         export-ignore
+/addons     !export-ignore
+/addons/**  !export-ignore

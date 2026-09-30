@@ -1,0 +1,142 @@
+[gd_scene format=3 uid="uid://noe2ppfybrxv"]
+
+[ext_resource type="Script" uid="uid://bh1lvk242sdxx" path="res://addons/input_mapping_contexts_via_stack/ui/imc_panel.gd" id="1_nok3x"]
+[ext_resource type="PackedScene" uid="uid://b0fpu46rqf2vb" path="res://addons/input_mapping_contexts_via_stack/ui/imc_adders/imc_add_context_unit.tscn" id="3_d1n11"]
+[ext_resource type="PackedScene" uid="uid://dgx7r7vw65hja" path="res://addons/input_mapping_contexts_via_stack/ui/imc_adders/imc_add_action_unit.tscn" id="4_37pby"]
+[ext_resource type="PackedScene" uid="uid://bx48x8uvcw454" path="res://addons/input_mapping_contexts_via_stack/ui/imc_adders/imc_refresh_unit.tscn" id="4_d1n11"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nok3x"]
+bg_color = Color(0.2159017, 0.21590173, 0.2159017, 1)
+
+[node name="IMCPanel" type="Panel" unique_id=890590854 node_paths=PackedStringArray("imc_context_unit_holder", "imc_action_unit_holder", "imc_add_context_unit", "imc_add_action_unit", "imc_refresh_unit")]
+custom_minimum_size = Vector2(0, 200)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_nok3x")
+imc_context_unit_holder = NodePath("ScrollContainer/GridContainer/CurrentContexts/MarginContainer/VBoxContainer/ScrollContainer/IMCContextUnitHolder")
+imc_action_unit_holder = NodePath("ScrollContainer/GridContainer/CurrentActions/MarginContainer/VBoxContainer/ScrollContainer/IMCActionUnitHolder")
+imc_add_context_unit = NodePath("ScrollContainer/GridContainer/AddContextsAndActions/MarginContainer/VBoxContainer/IMCAddContextUnit")
+imc_add_action_unit = NodePath("ScrollContainer/GridContainer/AddContextsAndActions/MarginContainer/VBoxContainer/IMCAddActionUnit")
+imc_refresh_unit = NodePath("ScrollContainer/GridContainer/AddContextsAndActions/MarginContainer/VBoxContainer/IMCRefreshUnit")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=1500325367]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GridContainer" type="HBoxContainer" parent="ScrollContainer" unique_id=1389068916]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="CurrentContexts" type="Panel" parent="ScrollContainer/GridContainer" unique_id=495370564]
+custom_minimum_size = Vector2(300, 200)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_nok3x")
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/GridContainer/CurrentContexts" unique_id=2112092682]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/GridContainer/CurrentContexts/MarginContainer" unique_id=1380255211]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ScrollContainer/GridContainer/CurrentContexts/MarginContainer/VBoxContainer" unique_id=1778749931]
+layout_mode = 2
+text = "Current Contexts:"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="ScrollContainer/GridContainer/CurrentContexts/MarginContainer/VBoxContainer" unique_id=1718937468]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="IMCContextUnitHolder" type="GridContainer" parent="ScrollContainer/GridContainer/CurrentContexts/MarginContainer/VBoxContainer/ScrollContainer" unique_id=1608604309]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="AddContextsAndActions" type="Panel" parent="ScrollContainer/GridContainer" unique_id=155209759]
+custom_minimum_size = Vector2(300, 200)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_nok3x")
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/GridContainer/AddContextsAndActions" unique_id=808926551]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/GridContainer/AddContextsAndActions/MarginContainer" unique_id=1967966615]
+layout_mode = 2
+
+[node name="IMCAddContextUnit" parent="ScrollContainer/GridContainer/AddContextsAndActions/MarginContainer/VBoxContainer" unique_id=1632137804 node_paths=PackedStringArray("imc_context_unit_holder") instance=ExtResource("3_d1n11")]
+layout_mode = 2
+imc_context_unit_holder = NodePath("../../../../CurrentContexts/MarginContainer/VBoxContainer/ScrollContainer/IMCContextUnitHolder")
+
+[node name="HSeparator" type="HSeparator" parent="ScrollContainer/GridContainer/AddContextsAndActions/MarginContainer/VBoxContainer" unique_id=2031111906]
+layout_mode = 2
+
+[node name="IMCAddActionUnit" parent="ScrollContainer/GridContainer/AddContextsAndActions/MarginContainer/VBoxContainer" unique_id=1183722279 node_paths=PackedStringArray("imc_action_unit_holder") instance=ExtResource("4_37pby")]
+visible = false
+layout_mode = 2
+imc_action_unit_holder = NodePath("../../../../CurrentActions/MarginContainer/VBoxContainer/ScrollContainer/IMCActionUnitHolder")
+
+[node name="IMCRefreshUnit" parent="ScrollContainer/GridContainer/AddContextsAndActions/MarginContainer/VBoxContainer" unique_id=1469825389 instance=ExtResource("4_d1n11")]
+layout_mode = 2
+
+[node name="CurrentActions" type="Panel" parent="ScrollContainer/GridContainer" unique_id=374660999]
+custom_minimum_size = Vector2(300, 200)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_nok3x")
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/GridContainer/CurrentActions" unique_id=1379717030]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/GridContainer/CurrentActions/MarginContainer" unique_id=1201264813]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ScrollContainer/GridContainer/CurrentActions/MarginContainer/VBoxContainer" unique_id=325281509]
+layout_mode = 2
+text = "Current Actions:"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="ScrollContainer/GridContainer/CurrentActions/MarginContainer/VBoxContainer" unique_id=1891523528]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="IMCActionUnitHolder" type="GridContainer" parent="ScrollContainer/GridContainer/CurrentActions/MarginContainer/VBoxContainer/ScrollContainer" unique_id=749309550]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3

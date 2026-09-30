@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://b0fpu46rqf2vb"]
+
+[ext_resource type="Script" uid="uid://dus82h026vqxj" path="res://addons/input_mapping_contexts_via_stack/ui/imc_adders/imc_add_context_unit.gd" id="1_8k6ps"]
+
+[node name="IMCAddContextUnit" type="VBoxContainer" unique_id=1632137804 node_paths=PackedStringArray("name_line_edit", "mouse_mode_option_button", "button")]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_8k6ps")
+name_line_edit = NodePath("Name/NameLineEdit")
+mouse_mode_option_button = NodePath("MouseMode/MouseModeOptionButton")
+button = NodePath("Button")
+
+[node name="Label" type="Label" parent="." unique_id=1885119536]
+layout_mode = 2
+text = "Add Context:"
+
+[node name="Name" type="HBoxContainer" parent="." unique_id=970178009]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Name" unique_id=140020174]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Name"
+
+[node name="NameLineEdit" type="LineEdit" parent="Name" unique_id=2010302359]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MouseMode" type="HBoxContainer" parent="." unique_id=1118638868]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MouseMode" unique_id=382640816]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Mouse Mode"
+
+[node name="MouseModeOptionButton" type="OptionButton" parent="MouseMode" unique_id=399004926]
+layout_mode = 2
+size_flags_horizontal = 3
+fit_to_longest_item = false
+item_count = 5
+popup/item_0/text = "Visible"
+popup/item_0/id = 0
+popup/item_1/text = "Hidden"
+popup/item_1/id = 1
+popup/item_2/text = "Captured"
+popup/item_2/id = 2
+popup/item_3/text = "Confined"
+popup/item_3/id = 3
+popup/item_4/text = "Confined Hidden"
+popup/item_4/id = 4
+
+[node name="Button" type="Button" parent="." unique_id=16102096]
+layout_mode = 2
+disabled = true
+text = "+ Add Context"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

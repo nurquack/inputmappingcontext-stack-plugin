@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://cgm53575527f1"]
+
+[ext_resource type="Script" uid="uid://b2ld6u5ytm3lf" path="res://addons/input_mapping_contexts_via_stack/ui/imc_context_option_button/imc_context_option_button.gd" id="1_ydcca"]
+
+[node name="IMCContextOptionButton" type="OptionButton" unique_id=1472882231]
+offset_right = 40.0
+offset_bottom = 20.0
+size_flags_horizontal = 3
+script = ExtResource("1_ydcca")

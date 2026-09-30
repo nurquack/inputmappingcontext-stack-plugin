@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://cw21evo7golgc"]
+
+[ext_resource type="Script" uid="uid://d00tttna02ahu" path="res://addons/input_mapping_contexts_via_stack/ui/imc_action_unit/imc_action_unit.gd" id="1_xbypx"]
+[ext_resource type="PackedScene" uid="uid://cgm53575527f1" path="res://addons/input_mapping_contexts_via_stack/ui/imc_context_option_button/imc_context_option_button.tscn" id="2_f7nkg"]
+[ext_resource type="Texture2D" uid="uid://bd1fjc62xj2ew" path="res://addons/input_mapping_contexts_via_stack/assets/delete_icon.png" id="3_igvoh"]
+
+[node name="IMCActionUnit" type="HBoxContainer" unique_id=1320084037 node_paths=PackedStringArray("action_edit_line", "context_option_button", "delete_button")]
+size_flags_horizontal = 3
+script = ExtResource("1_xbypx")
+action_edit_line = NodePath("ActionEditLine")
+context_option_button = NodePath("IMCContextOptionButton")
+delete_button = NodePath("DeleteButton")
+
+[node name="ActionEditLine" type="LineEdit" parent="." unique_id=286593996]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Bug"
+
+[node name="IMCContextOptionButton" parent="." unique_id=1472882231 instance=ExtResource("2_f7nkg")]
+layout_mode = 2
+clip_text = true
+fit_to_longest_item = false
+search_bar_enabled = true
+
+[node name="DeleteButton" type="Button" parent="." unique_id=949021176]
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+icon = ExtResource("3_igvoh")
+expand_icon = true
+
+[connection signal="text_submitted" from="ActionEditLine" to="." method="_on_action_edit_line_text_submitted"]
+[connection signal="item_selected" from="IMCContextOptionButton" to="." method="_on_imc_context_option_button_item_selected"]
+[connection signal="pressed" from="DeleteButton" to="." method="_on_delete_button_pressed"]

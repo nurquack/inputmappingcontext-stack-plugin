@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://uj0oaxb5souy"]
+
+[ext_resource type="Script" uid="uid://vwxf7i3evscc" path="res://addons/input_mapping_contexts_via_stack/ui/imc_context_unit/imc_context_unit.gd" id="1_cdwly"]
+[ext_resource type="Texture2D" uid="uid://bd1fjc62xj2ew" path="res://addons/input_mapping_contexts_via_stack/assets/delete_icon.png" id="1_rton0"]
+
+[node name="IMCContextUnit" type="HBoxContainer" unique_id=1320084037 node_paths=PackedStringArray("context_name_edit_line", "mouse_mode_option_button", "delete_button")]
+size_flags_horizontal = 3
+script = ExtResource("1_cdwly")
+context_name_edit_line = NodePath("ContextNameEditLine")
+mouse_mode_option_button = NodePath("MouseModeOptionButton")
+delete_button = NodePath("DeleteButton")
+
+[node name="ContextNameEditLine" type="LineEdit" parent="." unique_id=286593996]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Bug"
+
+[node name="MouseModeOptionButton" type="OptionButton" parent="." unique_id=42702407]
+layout_mode = 2
+size_flags_horizontal = 3
+selected = 0
+fit_to_longest_item = false
+item_count = 5
+popup/item_0/text = "Visible"
+popup/item_0/id = 0
+popup/item_1/text = "Hidden"
+popup/item_1/id = 1
+popup/item_2/text = "Captured"
+popup/item_2/id = 2
+popup/item_3/text = "Confined"
+popup/item_3/id = 3
+popup/item_4/text = "Confined Hidden"
+popup/item_4/id = 4
+
+[node name="DeleteButton" type="Button" parent="." unique_id=949021176]
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+icon = ExtResource("1_rton0")
+expand_icon = true
+
+[connection signal="text_submitted" from="ContextNameEditLine" to="." method="_on_name_edit_line_text_submitted"]
+[connection signal="item_selected" from="MouseModeOptionButton" to="." method="_on_mouse_mode_option_button_item_selected"]
+[connection signal="pressed" from="DeleteButton" to="." method="_on_delete_button_pressed"]

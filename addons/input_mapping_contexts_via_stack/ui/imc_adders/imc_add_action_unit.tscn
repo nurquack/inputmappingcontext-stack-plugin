@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://dgx7r7vw65hja"]
+
+[ext_resource type="Script" uid="uid://c7vo5eaoqq7jw" path="res://addons/input_mapping_contexts_via_stack/ui/imc_adders/imc_add_action_unit.gd" id="1_gkngm"]
+[ext_resource type="PackedScene" uid="uid://cgm53575527f1" path="res://addons/input_mapping_contexts_via_stack/ui/imc_context_option_button/imc_context_option_button.tscn" id="2_l0gb5"]
+
+[node name="IMCAddActionUnit" type="VBoxContainer" unique_id=1183722279 node_paths=PackedStringArray("name_line_edit", "context_option_button", "button")]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_gkngm")
+name_line_edit = NodePath("HBoxContainer/NameLineEdit")
+context_option_button = NodePath("HBoxContainer2/IMCContextOptionButton")
+button = NodePath("Button")
+
+[node name="Label" type="Label" parent="." unique_id=613012037]
+layout_mode = 2
+text = "Add Action:"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=242393416]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBoxContainer" unique_id=2018637134]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Name"
+
+[node name="NameLineEdit" type="LineEdit" parent="HBoxContainer" unique_id=813063188]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="." unique_id=1111857580]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBoxContainer2" unique_id=1814705417]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Context"
+
+[node name="IMCContextOptionButton" parent="HBoxContainer2" unique_id=1472882231 instance=ExtResource("2_l0gb5")]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="." unique_id=677346348]
+layout_mode = 2
+text = "+ Add Action"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
