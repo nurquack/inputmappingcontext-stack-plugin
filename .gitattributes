@@ -1,7 +1,2 @@
-# Zeilenenden vereinheitlichen
+# Normalize EOL for all files that Git considers text files.
 * text=auto eol=lf
-
-# Nur den addons-Ordner ins ZIP der AssetLib aufnehmen
-/**         export-ignore
-/addons     !export-ignore
-/addons/**  !export-ignore

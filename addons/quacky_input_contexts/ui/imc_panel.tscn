@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://noe2ppfybrxv"]
 
-[ext_resource type="Script" uid="uid://bh1lvk242sdxx" path="res://addons/input_mapping_contexts_via_stack/ui/imc_panel.gd" id="1_nok3x"]
-[ext_resource type="PackedScene" uid="uid://b0fpu46rqf2vb" path="res://addons/input_mapping_contexts_via_stack/ui/imc_adders/imc_add_context_unit.tscn" id="3_d1n11"]
-[ext_resource type="PackedScene" uid="uid://dgx7r7vw65hja" path="res://addons/input_mapping_contexts_via_stack/ui/imc_adders/imc_add_action_unit.tscn" id="4_37pby"]
-[ext_resource type="PackedScene" uid="uid://bx48x8uvcw454" path="res://addons/input_mapping_contexts_via_stack/ui/imc_adders/imc_refresh_unit.tscn" id="4_d1n11"]
+[ext_resource type="Script" uid="uid://bh1lvk242sdxx" path="res://addons/quacky_input_contexts/ui/imc_panel.gd" id="1_nok3x"]
+[ext_resource type="PackedScene" uid="uid://b0fpu46rqf2vb" path="res://addons/quacky_input_contexts/ui/imc_adders/imc_add_context_unit.tscn" id="3_d1n11"]
+[ext_resource type="PackedScene" uid="uid://dgx7r7vw65hja" path="res://addons/quacky_input_contexts/ui/imc_adders/imc_add_action_unit.tscn" id="4_37pby"]
+[ext_resource type="PackedScene" uid="uid://bx48x8uvcw454" path="res://addons/quacky_input_contexts/ui/imc_adders/imc_refresh_unit.tscn" id="4_d1n11"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nok3x"]
 bg_color = Color(0.2159017, 0.21590173, 0.2159017, 1)

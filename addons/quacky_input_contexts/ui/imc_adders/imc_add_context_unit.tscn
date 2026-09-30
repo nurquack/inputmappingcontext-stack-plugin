@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b0fpu46rqf2vb"]
 
-[ext_resource type="Script" uid="uid://dus82h026vqxj" path="res://addons/input_mapping_contexts_via_stack/ui/imc_adders/imc_add_context_unit.gd" id="1_8k6ps"]
+[ext_resource type="Script" uid="uid://dus82h026vqxj" path="res://addons/quacky_input_contexts/ui/imc_adders/imc_add_context_unit.gd" id="1_8k6ps"]
 
 [node name="IMCAddContextUnit" type="VBoxContainer" unique_id=1632137804 node_paths=PackedStringArray("name_line_edit", "mouse_mode_option_button", "button")]
 offset_right = 40.0

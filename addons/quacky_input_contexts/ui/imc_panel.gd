@@ -4,13 +4,13 @@ class_name IMCPanel
 
 var imc_set: IMCSet
 
-const CONTEXT_UNIT_SCENE = preload("res://addons/input_mapping_contexts_via_stack/ui/imc_context_unit/imc_context_unit.tscn")
-const ACTION_UNIT_SCENE = preload("res://addons/input_mapping_contexts_via_stack/ui/imc_action_unit/imc_action_unit.tscn")
+const CONTEXT_UNIT_SCENE = preload("res://addons/quacky_input_contexts/ui/imc_context_unit/imc_context_unit.tscn")
+const ACTION_UNIT_SCENE = preload("res://addons/quacky_input_contexts/ui/imc_action_unit/imc_action_unit.tscn")
 
-const INPUT_CONTEXTS_PATH: String = "res://my_imc_stack_data/generated/input_contexts.gd"
-const INPUT_ACTIONS_PATH: String = "res://my_imc_stack_data/generated/input_actions.gd"
+const INPUT_CONTEXTS_PATH: String = "res://quacky_input_contexts_data/generated/input_contexts.gd"
+const INPUT_ACTIONS_PATH: String = "res://quacky_input_contexts_data/generated/input_actions.gd"
 
-const IMCSET_PATH: String = "res://my_imc_stack_data/resources/imc_set.tres"
+const IMCSET_PATH: String = "res://quacky_input_contexts_data/resources/imc_set.tres"
 
 @export var imc_context_unit_holder: GridContainer
 @export var imc_action_unit_holder: GridContainer

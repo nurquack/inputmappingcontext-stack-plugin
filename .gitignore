@@ -1,8 +1,3 @@
+# Godot 4+ specific ignores
 .godot/
-*.translation
-export_presets.cfg
-project.godot
-icon.svg
-icon.svg.import
-*~
-my_imc_stack_data/
+/android/

@@ -1,9 +1,9 @@
-# Input Mapping Contexts via Stack
+# Quacky Input Contexts
 
 Allows the creation of custom input mapping contexts, linking these to a mouse mode, and linking the input actions, defined via the input map, to an input mapping context. Only those inputs belonging to the top-level input mapping context on the stack are ultimately processed.
 
 ## Installation
-1. Copy the folder 'addons/input_mapping_contexts_via_stack' into your project's 'addons/'-folder (or install with AssetLib).
+1. Copy the folder 'addons/quacky_input_contexts' into your project's 'addons/'-folder (or install with AssetLib).
 2. Project -> Project Settings -> Plugins -> Enable Plugin.
 
 ## Usage

@@ -2,10 +2,10 @@
 extends EditorPlugin
 
 const AUTOLOAD_NAME: String = "InputManager"
-const AUTOLOAD_PATH: String = "res://addons/input_mapping_contexts_via_stack/runtime/input_manager.gd"
-const PANEL_PATH: String = "res://addons/input_mapping_contexts_via_stack/ui/imc_panel.tscn"
+const AUTOLOAD_PATH: String = "res://addons/quacky_input_contexts/runtime/input_manager.gd"
+const PANEL_PATH: String = "res://addons/quacky_input_contexts/ui/imc_panel.tscn"
 
-const IMCSET_PATH: String = "res://my_imc_stack_data/resources/imc_set.tres"
+const IMCSET_PATH: String = "res://quacky_input_contexts_data/resources/imc_set.tres"
 
 var panel: IMCPanel
 

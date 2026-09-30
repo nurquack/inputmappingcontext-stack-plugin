@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://uj0oaxb5souy"]
 
-[ext_resource type="Script" uid="uid://vwxf7i3evscc" path="res://addons/input_mapping_contexts_via_stack/ui/imc_context_unit/imc_context_unit.gd" id="1_cdwly"]
-[ext_resource type="Texture2D" uid="uid://bd1fjc62xj2ew" path="res://addons/input_mapping_contexts_via_stack/assets/delete_icon.png" id="1_rton0"]
+[ext_resource type="Script" uid="uid://vwxf7i3evscc" path="res://addons/quacky_input_contexts/ui/imc_context_unit/imc_context_unit.gd" id="1_cdwly"]
+[ext_resource type="Texture2D" uid="uid://bd1fjc62xj2ew" path="res://addons/quacky_input_contexts/assets/delete_icon.png" id="1_rton0"]
 
 [node name="IMCContextUnit" type="HBoxContainer" unique_id=1320084037 node_paths=PackedStringArray("context_name_edit_line", "mouse_mode_option_button", "delete_button")]
 size_flags_horizontal = 3

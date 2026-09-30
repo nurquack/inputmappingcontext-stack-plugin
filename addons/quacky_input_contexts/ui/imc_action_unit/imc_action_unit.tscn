@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://cw21evo7golgc"]
 
-[ext_resource type="Script" uid="uid://d00tttna02ahu" path="res://addons/input_mapping_contexts_via_stack/ui/imc_action_unit/imc_action_unit.gd" id="1_xbypx"]
-[ext_resource type="PackedScene" uid="uid://cgm53575527f1" path="res://addons/input_mapping_contexts_via_stack/ui/imc_context_option_button/imc_context_option_button.tscn" id="2_f7nkg"]
-[ext_resource type="Texture2D" uid="uid://bd1fjc62xj2ew" path="res://addons/input_mapping_contexts_via_stack/assets/delete_icon.png" id="3_igvoh"]
+[ext_resource type="Script" uid="uid://d00tttna02ahu" path="res://addons/quacky_input_contexts/ui/imc_action_unit/imc_action_unit.gd" id="1_xbypx"]
+[ext_resource type="PackedScene" uid="uid://cgm53575527f1" path="res://addons/quacky_input_contexts/ui/imc_context_option_button/imc_context_option_button.tscn" id="2_f7nkg"]
+[ext_resource type="Texture2D" uid="uid://bd1fjc62xj2ew" path="res://addons/quacky_input_contexts/assets/delete_icon.png" id="3_igvoh"]
 
 [node name="IMCActionUnit" type="HBoxContainer" unique_id=1320084037 node_paths=PackedStringArray("action_edit_line", "context_option_button", "delete_button")]
 size_flags_horizontal = 3

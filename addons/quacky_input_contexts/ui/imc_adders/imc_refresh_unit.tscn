@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bx48x8uvcw454"]
 
-[ext_resource type="Script" uid="uid://rwqtm5gcywjf" path="res://addons/input_mapping_contexts_via_stack/ui/imc_adders/imc_refresh_unit.gd" id="1_ic8h6"]
+[ext_resource type="Script" uid="uid://rwqtm5gcywjf" path="res://addons/quacky_input_contexts/ui/imc_adders/imc_refresh_unit.gd" id="1_ic8h6"]
 
 [node name="IMCRefreshUnit" type="VBoxContainer" unique_id=1469825389]
 offset_right = 40.0

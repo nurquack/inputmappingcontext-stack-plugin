@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dgx7r7vw65hja"]
 
-[ext_resource type="Script" uid="uid://c7vo5eaoqq7jw" path="res://addons/input_mapping_contexts_via_stack/ui/imc_adders/imc_add_action_unit.gd" id="1_gkngm"]
-[ext_resource type="PackedScene" uid="uid://cgm53575527f1" path="res://addons/input_mapping_contexts_via_stack/ui/imc_context_option_button/imc_context_option_button.tscn" id="2_l0gb5"]
+[ext_resource type="Script" uid="uid://c7vo5eaoqq7jw" path="res://addons/quacky_input_contexts/ui/imc_adders/imc_add_action_unit.gd" id="1_gkngm"]
+[ext_resource type="PackedScene" uid="uid://cgm53575527f1" path="res://addons/quacky_input_contexts/ui/imc_context_option_button/imc_context_option_button.tscn" id="2_l0gb5"]
 
 [node name="IMCAddActionUnit" type="VBoxContainer" unique_id=1183722279 node_paths=PackedStringArray("name_line_edit", "context_option_button", "button")]
 offset_right = 40.0

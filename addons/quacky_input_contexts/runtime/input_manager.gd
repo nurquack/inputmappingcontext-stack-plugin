@@ -2,7 +2,7 @@ extends Node
 
 signal active_contexts_changed(active_contexts: Array[int], id_to_imc_dict: Dictionary[int, IMC])
 
-const IMC_SET_PATH: String = "res://my_imc_stack_data/resources/imc_set.tres"
+const IMC_SET_PATH: String = "res://quacky_input_contexts_data/resources/imc_set.tres"
 var imc_set: IMCSet
 
 var active_contexts: Array[int] = [
